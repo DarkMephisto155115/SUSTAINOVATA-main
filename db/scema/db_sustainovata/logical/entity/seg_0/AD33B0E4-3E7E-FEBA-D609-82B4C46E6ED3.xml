@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AD33B0E4-3E7E-FEBA-D609-82B4C46E6ED3" name="news">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:03:36 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_news" id="D082CB61-9CB7-678E-BC99-BE82E842D6FC">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:07:35 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="published_date" id="0E2A0218-CC18-EE19-A054-04C86C74A2D6">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:07:51 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="text" id="222F32FC-1AD5-0130-7F3F-F855211B79FC">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:08:35 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ringkasan" id="A7B2B0FF-D02C-56E8-C807-4EFD8A1344A4">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:12:29 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cover_image" id="B83C6253-AE4D-2BA5-452B-F15AF578BE66">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:12:58 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_user" id="8A99B5EF-3911-5326-AA4B-20D03636D4EC">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:19:07 UTC</createdTime>
+<generatorID>161324B3-5A08-E766-D50E-0F67CD7CCAF7</generatorID>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<referedAttribute>62FEEA6E-6F4F-EE1E-8467-9FFDAEF25A2F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AC1BC62F-079D-E834-4CB6-1F272B0E4086" name="news PK">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:08:32 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D082CB61-9CB7-678E-BC99-BE82E842D6FC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

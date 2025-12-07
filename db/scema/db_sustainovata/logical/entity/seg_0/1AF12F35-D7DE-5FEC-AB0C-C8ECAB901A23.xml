@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1AF12F35-D7DE-5FEC-AB0C-C8ECAB901A23" name="jurnal">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:03:53 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Jurnal" id="E7EE58CC-824E-FA3B-9D4A-9417CB2BF147">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:04:26 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="judul" id="57755C20-5AE8-D8E9-CFCF-EE0E84C5B428">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:04:50 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="writer" id="25B4C116-872D-5181-8694-28F7BD52D903">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:05:06 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="doi" id="4C1FF7BA-E734-D831-23A8-9B1E5BECEB91">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:05:23 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="published_date" id="BD9ECC12-FF40-CC39-31CC-1DE101B0E17F">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:05:36 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="keyword" id="D1A4A2BB-7430-8F28-B088-8389760D81FE">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:05:53 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="abstract" id="0F55FF1A-C7A8-3556-77EE-9BA7A975C854">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:06:10 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="upload_date" id="A0122A0A-211D-087E-59F6-AD895C96CADF">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:06:26 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file" id="BF7DF573-B4D7-B47B-2A1F-553560813142">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:15:45 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-7DD553FD-11E8-61FA-399D-2E531FB621D0@LOGDT10034</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cover_image" id="A92701CD-7119-94D2-73F3-D7B7FD8E4ADA">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:16:26 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_user" id="DFDEF056-7550-D61A-365C-4E089C5C8AF0">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:19:11 UTC</createdTime>
+<generatorID>2DA6EA75-46F2-7F50-5B2C-38545600144A</generatorID>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<referedAttribute>62FEEA6E-6F4F-EE1E-8467-9FFDAEF25A2F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B8C180B6-C623-0818-5654-E1FE3D33D260" name="jurnal PK">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:04:43 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E7EE58CC-824E-FA3B-9D4A-9417CB2BF147</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

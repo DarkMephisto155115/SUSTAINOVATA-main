@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A3E70417-5B54-F6EE-B00E-BBED1BD52033" name="pograms">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:04:01 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_program" id="33D5A276-40D2-2FEF-2DE7-5ED4C830B332">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:16:58 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="933A0055-B615-0063-D394-63DD3E53ADF4">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:16:45 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="peserta" id="1024DA45-227C-552B-24D9-46F1B5314918">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:17:14 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="start_date" id="38FB8D47-DE78-7140-1A46-000628A2034F">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:17:32 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date" id="7C42C92B-EBFC-2F09-F3E5-1DB6E0B190F1">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:18:03 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="41F46D0D-33CA-BD9B-7174-851C1775BD76">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:18:13 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="poster" id="CC7A4D99-6298-75EF-1A0A-E18976D538DD">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:19:51 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C2E9EAFB-3127-113B-4FDB-9DB524FFCAA3" name="pograms PK">
+<createdBy>Hasbi Ash S</createdBy>
+<createdTime>2025-05-25 11:17:13 UTC</createdTime>
+<ownerDesignName>db_sustainovata</ownerDesignName>
+<engineerTo>
+<item key="DEDBFF13-3B50-8B51-16DE-BACF77D0ECC1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>33D5A276-40D2-2FEF-2DE7-5ED4C830B332</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
