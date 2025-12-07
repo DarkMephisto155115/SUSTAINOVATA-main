@@ -22,4 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-*.md
+
+# Zencoder specific files
+CLAUDE.md
+ZENCODER.md
+.zencoder
+.zencoder/
