@@ -48,6 +48,12 @@ class JournalReviewController {
         return res.status(404).json({ message: 'Journal not found' });
       }
 
+      console.log(`\n📖 Journal Detail Request for ID: ${id}`);
+      console.log(`   Title: ${journal[0].title}`);
+      console.log(`   PDF File: ${journal[0].file}`);
+      console.log(`   Cover Image: ${journal[0].cover_image}`);
+      console.log(`   Status: ${journal[0].status}`);
+
       const reviewQuery = `
         SELECT * FROM journal_reviews
         WHERE ID_jurnal = ?

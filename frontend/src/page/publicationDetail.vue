@@ -47,12 +47,31 @@
 
               <div class="publication-actions">
                 <h3 class="text-success mb-3">Aksi</h3>
-                <a v-if="publication.file" :href="`http://localhost:3000/api/images/jurnal/pdf/${encodeURIComponent(publication.file)}`" target="_blank" class="btn btn-success btn-lg me-2">
-                  <i class="bi bi-download me-2"></i>Unduh PDF
-                </a>
-                <button class="btn btn-outline-success btn-lg">
-                  <i class="bi bi-share me-2"></i>Bagikan
-                </button>
+                <div class="d-flex gap-2 flex-wrap mb-3">
+                  <button v-if="publication.file" @click="togglePdfViewer" class="btn btn-outline-success btn-lg">
+                    <i class="bi bi-eye me-2"></i>{{ showPdfViewer ? 'Sembunyikan PDF' : 'Lihat PDF' }}
+                  </button>
+                  <a
+                    v-if="pdfUrl"
+                    :href="pdfUrl"
+                    download
+                    class="btn btn-success btn-lg me-2"
+                  >
+                    <i class="bi bi-download me-2"></i>Unduh PDF
+                  </a>
+                  <button class="btn btn-outline-success btn-lg">
+                    <i class="bi bi-share me-2"></i>Bagikan
+                  </button>
+                </div>
+
+                <!-- PDF Viewer -->
+                <div v-if="showPdfViewer && pdfUrl" class="pdf-viewer-container mt-3">
+                  <iframe
+                    :src="pdfUrl"
+                    class="pdf-embed"
+                    frameborder="0"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -98,7 +117,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
 
@@ -115,6 +134,16 @@ const publication = ref({
   date_upload: '',
   status: ''
 });
+const showPdfViewer = ref(false);
+
+const pdfUrl = computed(() => {
+  if (!publication.value?.file) return null;
+  return `http://localhost:3000/api/images/jurnal/pdf/${encodeURIComponent(publication.value.file)}`;
+});
+
+const togglePdfViewer = () => {
+  showPdfViewer.value = !showPdfViewer.value;
+};
 
 const formatDate = (date) => {
   if (!date) return '-';
@@ -207,5 +236,18 @@ onMounted(async () => {
     position: static !important;
     margin-top: 1rem;
   }
+}
+
+.pdf-viewer-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.pdf-embed {
+  width: 100%;
+  height: 700px;
+  display: block;
 }
 </style>

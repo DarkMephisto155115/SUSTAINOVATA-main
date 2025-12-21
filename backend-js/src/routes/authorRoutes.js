@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const AuthorJournalController = require('../controllers/client/authorJournalController');
 const { verifyToken } = require('../middlewares/authorization');
 const { createUploader } = require('../utils/uploads');
 
 const uploadJournal = createUploader((req, file) => {
-  if (file.fieldname === 'file') return 'src/fileSaved/pdf';
-  if (file.fieldname === 'cover_image') return 'src/fileSaved/images/jurnal';
-  return 'src/fileSaved/other';
+  if (file.fieldname === 'file') return path.join(__dirname, '../fileSaved/pdf');
+  if (file.fieldname === 'cover_image') return path.join(__dirname, '../fileSaved/images/jurnal');
+  return path.join(__dirname, '../fileSaved/other');
 });
 
 router.use(verifyToken);

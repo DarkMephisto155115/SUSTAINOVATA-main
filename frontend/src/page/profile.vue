@@ -40,6 +40,11 @@
               <button @click="showEditForm = !showEditForm" class="btn btn-primary w-100 mt-4">
                 <i class="bi bi-pencil"></i> Edit Profile
               </button>
+
+              <!-- Logout Button -->
+              <button @click="handleLogout" class="btn btn-danger w-100 mt-3">
+                <i class="bi bi-box-arrow-right"></i> Logout
+              </button>
             </div>
           </div>
         </div>
@@ -239,8 +244,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import { getToken, getUser } from '@/utils/auth';
+import { useRouter } from 'vue-router';
+import { getToken, getUser, logout } from '@/utils/auth';
 
+const router = useRouter();
 const token = getToken();
 const user = ref(null);
 const showEditForm = ref(false);
@@ -268,6 +275,11 @@ const getRoleLabel = (role) => {
 
 const getRoleClass = (role) => {
   return role || 'user';
+};
+
+const handleLogout = () => {
+  logout();
+  router.push('/');
 };
 
 const updateProfile = async () => {

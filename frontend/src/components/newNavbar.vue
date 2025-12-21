@@ -134,6 +134,7 @@ const handleLogout = () => {
   logout();
   isLoggedIn.value = false;
   user.value = {};
+  router.push('/');
 };
 
 const handleDashboard = () => {

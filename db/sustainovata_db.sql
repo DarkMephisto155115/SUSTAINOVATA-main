@@ -46,15 +46,15 @@ CREATE TABLE `users` (
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO users (name, email, password, role) 
+INSERT INTO users (name, email, password, role)
 VALUES ('Admin User', 'admin@test.com', '$2b$10$mLEapRS9h2piwDO0gFdr9uenglCT2KfB41g6uY2ezIEdpa7vcDMpu', 'admin');
 
 -- Editor account
-INSERT INTO users (name, email, password, role) 
+INSERT INTO users (name, email, password, role)
 VALUES ('Editor User', 'editor@test.com', '$2b$10$mLEapRS9h2piwDO0gFdr9uenglCT2KfB41g6uY2ezIEdpa7vcDMpu', 'editor');
 
 -- Author account
-INSERT INTO users (name, email, password, role) 
+INSERT INTO users (name, email, password, role)
 VALUES ('Author User', 'author@test.com', '$2b$10$mLEapRS9h2piwDO0gFdr9uenglCT2KfB41g6uY2ezIEdpa7vcDMpu', 'author');
 
 -- --------------------------------------------------------
@@ -80,8 +80,6 @@ CREATE TABLE `programs` (
 -- Dumping data untuk tabel `programs`
 --
 
-INSERT INTO `programs` (`ID_program`, `name`, `status`, `description`, `peserta`, `start_date`, `end_date`, `poster`, `add_date`, `Jenis_program`) VALUES
-(8, 'berburu tikus di kantor dpr', 'Pendaftaran', 'berburu tikus di kantor dpr ri yang paling banyak bakal mendapatkan hadiah dengan total hadiah Rp100.000.000\r\ndi bagi ', 6, '2025-05-09', '2025-05-15', '1748129166170-novelku logo.png', '2025-05-25', 'perburuan');
 
 -- --------------------------------------------------------
 
@@ -116,8 +114,6 @@ CREATE TABLE `news` (
 -- Dumping data untuk tabel `news`
 --
 
-INSERT INTO `news` (`ID_news`, `title`, `kategori`, `ringkasan`, `text`, `cover`, `date_published`, `date_upload`, `FK_ID_user`) VALUES
-(4, 'testing anjing', 'tes asuii', 'tes anjing', 'tes bangkek', '1748127785498-terra_brain_logo.png', '2025-05-24', '2025-05-25', 0);
 
 -- --------------------------------------------------------
 
@@ -144,10 +140,6 @@ CREATE TABLE `jurnal` (
 --
 -- Dumping data untuk tabel `jurnal`
 --
-
-INSERT INTO `jurnal` (`ID_jurnal`, `title`, `writer`, `keyword`, `abstract`, `doi`, `file`, `cover_image`, `date_published`, `date_upload`, `FK_ID_user`) VALUES
-(16, 'testing', 'tes', 'tes', 'tes', 'tes', '1748125077111-dplt1.pdf', '1748124937964-code.png', '2025-04-30', '2025-05-25', 0);
-
 -- ============================================================
 -- New Tables for Features
 -- ============================================================

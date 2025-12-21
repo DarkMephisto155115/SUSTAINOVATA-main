@@ -28,3 +28,8 @@ CLAUDE.md
 ZENCODER.md
 .zencoder
 .zencoder/
+
+
+# Ignore saved file
+backend-js/src/fileSaved/**
+

@@ -71,6 +71,37 @@
         </div>
       </div>
 
+      <!-- Current Journal Document Viewer -->
+      <div v-if="isEditMode && journal && journal.file" class="card mt-4">
+        <div class="card-header bg-info text-white">
+          <h5 class="mb-0">📄 Current Document</h5>
+        </div>
+        <div class="card-body">
+          <div class="d-flex gap-2 mb-3">
+            <button @click="togglePdfViewer" class="btn btn-sm btn-outline-primary">
+              <i class="bi bi-eye"></i> {{ showPdfViewer ? 'Hide PDF' : 'View PDF' }}
+            </button>
+            <a
+              v-if="pdfUrl"
+              :href="pdfUrl"
+              download
+              class="btn btn-sm btn-outline-secondary"
+            >
+              <i class="bi bi-download"></i> Download PDF
+            </a>
+          </div>
+
+          <!-- PDF Viewer -->
+          <div v-if="showPdfViewer && pdfUrl" class="pdf-viewer-container">
+            <iframe
+              :src="pdfUrl"
+              class="pdf-embed"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
       <div v-if="isEditMode && journal && (journal.status === 'revision_needed' || journal.status === 'under_revision')" class="card mt-4">
         <div class="card-header bg-warning">
           <h5 class="mb-0">📝 Upload Revision</h5>
@@ -106,7 +137,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import axios from 'axios';
 import { getToken } from '@/utils/auth';
@@ -123,6 +154,16 @@ const selectedFile = ref(null);
 const selectedCover = ref(null);
 const selectedRevision = ref(null);
 const revisionNotes = ref('');
+const showPdfViewer = ref(false);
+
+const pdfUrl = computed(() => {
+  if (!journal.value?.file) return null;
+  return `http://localhost:3000/api/images/jurnal/pdf/${encodeURIComponent(journal.value.file)}`;
+});
+
+const togglePdfViewer = () => {
+  showPdfViewer.value = !showPdfViewer.value;
+};
 
 const form = ref({
   title: '',
@@ -309,5 +350,18 @@ onMounted(async () => {
 
 textarea.form-control {
   resize: vertical;
+}
+
+.pdf-viewer-container {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.pdf-embed {
+  width: 100%;
+  height: 600px;
+  display: block;
 }
 </style>

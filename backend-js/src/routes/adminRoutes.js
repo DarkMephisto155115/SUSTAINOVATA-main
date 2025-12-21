@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const admin = require('../controllers/admin/adminControllers');
 const { createUploader } = require('../utils/uploads');
 const { verifyToken, authorize } = require('../middlewares/authorization');
@@ -10,12 +11,12 @@ router.use(authorize('admin', 'editor'));
 router.get('/dashboard', admin.dashboard);
 
 const uploadJurnal = createUploader((req, file) => {
-  if (file.fieldname === 'file') return 'src/fileSaved/pdf';
-  if (file.fieldname === 'cover_image') return 'src/fileSaved/images/jurnal';
-  return 'src/fileSaved/other';
+  if (file.fieldname === 'file') return path.join(__dirname, '../fileSaved/pdf');
+  if (file.fieldname === 'cover_image') return path.join(__dirname, '../fileSaved/images/jurnal');
+  return path.join(__dirname, '../fileSaved/other');
 });
-const uploadBerita = createUploader(() => 'src/fileSaved/images/berita');
-const uploadProgram = createUploader(() => 'src/fileSaved/images/program');
+const uploadBerita = createUploader(() => path.join(__dirname, '../fileSaved/images/berita'));
+const uploadProgram = createUploader(() => path.join(__dirname, '../fileSaved/images/program'));
 
 router.get('/jurnal', admin.getAllJurnal);
 router.delete('/jurnal/:id', admin.deleteJurnal);
